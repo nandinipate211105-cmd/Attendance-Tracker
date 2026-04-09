@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVENTS Attendance Details</title>
+  <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+
+  <div class="logout-container">
+    <button class="logout-btn" onclick="goBack()">⬅️</button>
+  </div>
+
+  <h1>EVENTS Attendance Details</h1>
+
+  <div class="subject-details">
+    <table>
+      <tr><th>Date</th><th>Topic Covered</th><th>Present/Absent</th></tr>
+      <tr><td>02-Oct</td><td>CodeCraft</td><td>Present</td></tr>
+      <tr><td>04-Oct</td><td>Hackathon</td><td>Absent</td></tr>
+      <tr><td>05-Oct</td><td>ACM</td><td>Present</td></tr>
+      <tr><td>06-Oct</td><td>GDC</td><td>Present</td></tr>
+      <tr><td>10-Oct</td><td>SP Walk</td><td>Absent</td></tr>
+      <tr><td>11-Oct</td><td>Diya Making</td><td>Present</td></tr>
+      <tr><td>12-Oct</td><td>Lantern Making</td><td>Present</td></tr>
+      <tr><td>18-Oct</td><td>ACM-W</td><td>Present</td></tr>
+      <tr><td>19-Oct</td><td>Gala Dinner</td><td>Present</td></tr>
+      <tr><td>20-Oct</td><td>IKS Trip</td><td>Present</td></tr>
+      <tr><td>21-Oct</td><td>Guest Lecture</td><td>Present</td></tr>
+      <tr><td>25-Oct</td><td>Induction</td><td>Present</td></tr>
+      <tr><td>26-Oct</td><td>MatLab</td><td>Present</td></tr>
+      <tr><td>01-Nov</td><td>Got Talent</td><td>Absent</td></tr>
+      <tr><td>02-Nov</td><td>Roborashtra</td><td>Present</td></tr>
+      <tr><td>05-Nov</td><td>Aarambh</td><td>Present</td></tr>
+    </table>
+
+    <div class="summary">
+      Total Classes: <span id="totalClasses">15</span><br>
+      Attended: <span id="attendedClasses">15</span><br>
+      Attendance: <span id="percent"></span>
+    </div>
+
+    <button class="calculate-btn" onclick="goBack()">
+      🔙 Back to Dashboard
+    </button>
+  </div>
+
+  <script src="subject.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const percent = ( 15 / 15 * 100).toFixed(1);
+      document.getElementById("percent").textContent = percent + "%";
+    });
+
+    function goBack() {
+    window.location.href = "main.html"; // Navigates back to main page
+  }
+  </script>
+</body>
+</html>

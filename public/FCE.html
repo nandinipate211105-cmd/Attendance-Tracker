@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCE Attendance Details</title>
+  <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+
+  <div class="logout-container">
+    <button class="logout-btn" onclick="goBack()">⬅️</button>
+  </div>
+
+  <h1>FCE Attendance Details</h1>
+
+  <div class="subject-details">
+    <table>
+      <tr><th>Date</th><th>Topic Covered</th><th>Present/Absent</th></tr>
+      <tr><td>01-Oct</td><td>Introduction to Computers</td><td>Present</td></tr>
+      <tr><td>03-Oct</td><td>Generation of Computers</td><td>Absent</td></tr>
+      <tr><td>06-Oct</td><td>Types of Computers</td><td>Present</td></tr>
+      <tr><td>07-Oct</td><td>Hardware, Software, Firmware</td><td>Present</td></tr>
+      <tr><td>08-Oct</td><td>Computing</td><td>Absent</td></tr>
+      <tr><td>10-Oct</td><td>Computer Hardware</td><td>Present</td></tr>
+      <tr><td>13-Oct</td><td>Input-Output Devices</td><td>Absent</td></tr>
+      <tr><td>15-Oct</td><td>Storage Devices</td><td>Present</td></tr>
+      <tr><td>16-Oct</td><td>AR/VR Devices</td><td>Present</td></tr>
+      <tr><td>17-Oct</td><td>Computer Assembly</td><td>Present</td></tr>
+      <tr><td>27-Oct</td><td>Troubleshooting</td><td>Present</td></tr>
+      <tr><td>28-Oct</td><td>Operating Systems</td><td>Present</td></tr>
+      <tr><td>29-Oct</td><td>Peripherals</td><td>Present</td></tr>
+      <tr><td>03-Nov</td><td>Batch, Multitasking, Real-time</td><td>Absent</td></tr>
+      <tr><td>05-Nov</td><td>Whindows OS</td><td>Absent</td></tr>
+      <tr><td>07-Nov</td><td>Linux OS</td><td>Present</td></tr>
+    </table>
+
+    <div class="summary">
+      Total Classes: <span id="totalClasses">15</span><br>
+      Attended: <span id="attendedClasses">10</span><br>
+      Attendance: <span id="percent"></span>
+    </div>
+
+    <button class="calculate-btn" onclick="goBack()">
+      🔙 Back to Dashboard
+    </button>
+  </div>
+
+  <script src="subject.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const percent = ( 10 / 15 * 100).toFixed(1);
+      document.getElementById("percent").textContent = percent + "%";
+    });
+
+    function goBack() {
+    window.location.href = "main.html"; // Navigates back to main page
+  }
+  </script>
+</body>
+</html>

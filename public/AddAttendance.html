@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Attendance</title>
+  <link rel="stylesheet" href="addAttendance.css">
+</head>
+<body>
+
+<div class="attendance-card">
+  <h2>Add Attendance</h2>
+
+  <select id="subject">
+    <option value="">Select Subject</option>
+    <option value="CHEMISTRY">CHEMISTRY</option>
+    <option value="EGA">EGA</option>
+    <option value="PIC">PIC</option>
+    <option value="FCE">FCE</option>
+    <option value="MATHS">MATHS</option>
+    <option value="DTIL">DTIL</option>
+    <option value="IKS">IKS</option>
+    <option value="LS">LS</option>
+    <option value="EVENTS">EVENTS</option>
+  </select>
+
+  <input type="date" id="date">
+  <input type="text" id="topic" placeholder="Topic Covered">
+
+  <!-- ✅ STUDENTS WILL APPEAR HERE -->
+  <div id="studentsList" class="students-box"></div>
+
+  <button id="saveAttendanceBtn">Save Attendance</button>
+</div>
+
+<button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+
+<!-- 🔥 MUST BE MODULE -->
+<script type="module" src="AddAttendance.js"></script>
+
+</body>
+</html>

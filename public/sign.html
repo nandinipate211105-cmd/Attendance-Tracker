@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Tracker - Sign Up</title>
+  <link rel="stylesheet" href="sign.css">
+</head>
+
+<body>
+
+  <!-- User Type Selector -->
+  <div class="user-type-fixed">
+    <span>User Type:</span>
+    <label>
+      <input type="radio" name="role" value="student">
+      Student
+    </label>
+    <label>
+      <input type="radio" name="role" value="teacher">
+      Teacher
+    </label>
+  </div>
+
+  <div class="signup-container">
+    <h1>User Registration</h1>
+
+    <form id="signupForm">
+
+      <!-- COMMON -->
+      <input type="text" name="fullname" placeholder="Full Name" required>
+
+      <!-- STUDENT FIELDS -->
+      <div id="studentFields">
+        <input type="text" name="roll_no" placeholder="Roll No">
+        <input type="text" name="prn_no" placeholder="PRN No">
+        <input type="text" name="class" placeholder="Class">
+        <input type="text" name="division" placeholder="Division">
+        <input type="text" name="branch" placeholder="Branch">
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+
+      </div>
+
+      <!-- TEACHER FIELDS -->
+      <div id="teacherFields" style="display:none;">
+        <input type="text" name="subject" placeholder="Subject">
+        <input type="text" name="post" placeholder="Post / Designation">
+        <input type="text" name="employee_no" placeholder="Employee Number">
+      </div>
+
+      <!-- COMMON CONTINUED -->
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+      </select>
+
+
+      <input type="tel" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+      <button type="submit">Register</button>
+      <a href="login.html" class="login-link">Already have an account? Login</a>
+
+    </form>
+  </div>
+
+  <!-- Role Toggle Script -->
+   <script>
+  const studentFields = document.getElementById("studentFields");
+  const teacherFields = document.getElementById("teacherFields");
+
+  const studentRequired = studentFields.querySelectorAll("input, select");
+  const teacherRequired = teacherFields.querySelectorAll("input");
+
+  document.querySelectorAll('input[name="role"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "student") {
+        studentFields.style.display = "block";
+        teacherFields.style.display = "none";
+
+        studentRequired.forEach(el => el.required = true);
+        teacherRequired.forEach(el => el.required = false);
+      } else {
+        studentFields.style.display = "none";
+        teacherFields.style.display = "block";
+
+        studentRequired.forEach(el => el.required = false);
+        teacherRequired.forEach(el => el.required = true);
+      }
+    });
+  });
+</script>
+
+
+
+  <script type="module" src="backend.js"></script>
+</body>
+</html>

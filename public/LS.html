@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LS Attendance Details</title>
+  <link rel="stylesheet" href="subject.css">
+</head>
+<body>
+
+  <div class="logout-container">
+    <button class="logout-btn" onclick="goBack()">⬅️</button>
+  </div>
+
+  <h1>LIFE-SKILLS Attendance Details</h1>
+
+  <div class="subject-details">
+    <table>
+      <tr><th>Date</th><th>Topic Covered</th><th>Present/Absent</th></tr>
+      <tr><td>01-Oct</td><td>Introduction To Life Skills</td><td>Present</td></tr>
+      <tr><td>03-Oct</td><td>Time Management</td><td>Absent</td></tr>
+      <tr><td>06-Oct</td><td>Techniques for SMART goal</td><td>Absent</td></tr>
+      <tr><td>07-Oct</td><td>Personality Development</td><td>Present</td></tr>
+      <tr><td>08-Oct</td><td>SWOT Analysis</td><td>Absent</td></tr>
+      <tr><td>10-Oct</td><td>Case Studies</td><td>Present</td></tr>
+      <tr><td>13-Oct</td><td>PDCA Cycle</td><td>Present</td></tr>
+      <tr><td>15-Oct</td><td>Yoga Meditation</td><td>Present</td></tr>
+      <tr><td>16-Oct</td><td>Paths of  Yoga</td><td>Present</td></tr>
+      <tr><td>17-Oct</td><td>Patanjali's Yoga philosophy</td><td>Present</td></tr>
+      <tr><td>27-Oct</td><td>Health Well Being</td><td>Present</td></tr>
+      <tr><td>28-Oct</td><td>Healthy Balance Diet</td><td>Present</td></tr>
+      <tr><td>29-Oct</td><td>Diet mental health</td><td>Present</td></tr>
+      <tr><td>03-Nov</td><td>Dietary choices</td><td>Absent</td></tr>
+      <tr><td>05-Nov</td><td>Types of nutrition</td><td>Present</td></tr>
+      <tr><td>07-Nov</td><td>Yogic concept of Health</td><td>Present</td></tr>
+    </table>
+
+    <div class="summary">
+      Total Classes: <span id="totalClasses">15</span><br>
+      Attended: <span id="attendedClasses">11</span><br>
+      Attendance: <span id="percent"></span>
+    </div>
+
+    <button class="calculate-btn" onclick="goBack()">
+      🔙 Back to Dashboard
+    </button>
+  </div>
+
+  <script src="subject.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const percent = ( 11 / 15 * 100).toFixed(1);
+      document.getElementById("percent").textContent = percent + "%";
+    });
+
+    function goBack() {
+    window.location.href = "main.html"; // Navigates back to main page
+  }
+  </script>
+</body>
+</html>

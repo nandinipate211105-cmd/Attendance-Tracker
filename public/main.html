@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Tracker</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="top-right">
+    <div class="student-info">
+        <span class="student-icon">🎓</span>
+        <div class="student-text">
+            <span id="name"></span>
+            <span id="roll"></span>
+        </div>
+    </div>
+    <button class="logout-btn" onclick="logoutUser()">
+      <span class="lock-icon">🔒</span>
+    </button>
+  </div>
+
+
+  <h1>Welcome to Attendance Tracker!!</h1>
+  <h2>Track your daily attendace here</h2>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Total Classes</th>
+
+          <th>Attended</th>
+          <th>Attendance %</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceTable">
+        <tr>
+          <td><h3><a href="Chem.html" class="subject-link">CHEMISTRY</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="EGA.html" class="subject-link">EGA</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="PIC.html" class="subject-link">PIC</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="DTIL.html" class="subject-link">DTIL</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="MATHS.html" class="subject-link">MATHS</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="IKS.html" class="subject-link">IKS</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="FCE.html" class="subject-link">FCE</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="LS.html" class="subject-link">LS</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+        <tr>
+          <td><h3><a href="EVENTS.html" class="subject-link">EVENTS</a></h3></td>
+          <td><input type="number" class="total" value="15"></td>
+          <td><input type="number" class="attended" value=""></td>
+          <td class="percent"></td>
+        </tr>
+  
+      </tbody>
+  </table>
+  <button type="button" class="calculate-btn" onclick="calculateAttendance()">Calculate Attendance</button>
+  <button class="calculate-btn" onclick="saveAttendance()">Save Attendance</button>
+
+    <div class="summary">
+      Total Days Attended: <span id="totalAttended">0</span><br>
+      Overall Attendance: <span id="overallPercent">0%</span>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

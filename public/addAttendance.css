@@ -1,0 +1,142 @@
+ /* RESET */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN CARD */
+.attendance-card {
+  background: #ffffff;
+  width: 92%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+  overflow: visible;
+}
+
+/* TITLE */
+.attendance-card h2 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.attendance-card select,
+.attendance-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.attendance-card input:focus,
+.attendance-card select:focus {
+  outline: none;
+  border-color: #2a5298;
+}
+
+/* STUDENT LIST */
+.students-box {
+  margin-top: 10px;
+  padding: 12px;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #d0d0d0;
+  background: #f7f9ff;
+}
+
+/* INDIVIDUAL STUDENT */
+.student-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.student-item:hover {
+  transform: scale(1.02);
+}
+
+.student-item input {
+  transform: scale(1.2);
+}
+
+/* SAVE BUTTON */
+#saveAttendanceBtn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#saveAttendance {
+  pointer-events: auto;
+  z-index: 10;
+  position: relative;
+}
+
+
+#saveAttendanceBtn:hover {
+  opacity: 0.9;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+

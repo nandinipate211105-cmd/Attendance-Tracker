@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="teacher.css">
+</head>
+<body>
+
+  <header>
+    <h1>👩‍🏫 Teacher Dashboard</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+
+  </header>
+
+  <main>
+    <h2>Student Attendance Records</h2>
+
+   
+    <div class="subjects-grid" id="subjectsGrid"></div>
+    <body>
+      
+  <div class="parallax-bg"></div>
+
+
+
+  <!-- Modal -->
+  <div class="modal" id="subjectModal">
+    <div class="modal-content glass">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Attended</th>
+            <th>Total</th>
+            <th>%</th>
+          </tr>
+        </thead>
+        <tbody id="modalTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+<button id="addAttendanceBtn" class="add-attendance-btn" onclick="goToAddAttendance()">
+  <span class="add-icon">➕</span>
+  <span class="add-text">Add Attendance</span>
+</button>
+
+
+  <script type="module" src="teacher.js"></script>
+</body>
+
+
+
+
+</html>

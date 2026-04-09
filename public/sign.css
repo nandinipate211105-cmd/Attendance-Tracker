@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url('login.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+  pointer-events: none;   /* 🔥 THIS LINE FIXES IT */
+}
+
+
+/* Role selector */
+.user-type-fixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.75);
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  color: #fff;
+  z-index: 10;
+}
+
+.user-type-fixed span {
+  color: #00ffb3;
+  font-weight: bold;
+}
+
+.user-type-fixed input {
+  accent-color: #00ffb3;
+}
+
+/* Form */
+.signup-container {
+  position: relative;
+  width: 400px;
+  background: rgba(0,0,0,0.55);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+input:focus, select:focus {
+  border-bottom: 2px solid #00ffb3;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #013a2a;
+}
+
+.login-link {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #00ffb3;
+}
